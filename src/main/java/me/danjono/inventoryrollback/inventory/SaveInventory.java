@@ -37,9 +37,6 @@ public class SaveInventory {
         Long timestamp = System.currentTimeMillis();
         PlayerData data = new PlayerData(player, logType, timestamp);
 
-        //Remove excess saves if limit is reached
-        data.purgeExcessSaves();
-
         for (ItemStack item : mainInventory.getContents()) {
             if (item != null) {
                 data.setMainInventory(mainInventory.getContents());

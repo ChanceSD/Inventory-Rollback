@@ -400,6 +400,8 @@ public class PlayerData {
 
     public void saveData() {
         Bukkit.getScheduler().runTaskAsynchronously(InventoryRollback.getInstance(), () -> { 
+        	//Remove excess saves if limit is reached
+            purgeExcessSaves();
             if (ConfigData.getSaveType() == SaveType.YAML) {
                 yaml.saveData();
             } else if (ConfigData.getSaveType() == SaveType.MYSQL) {
