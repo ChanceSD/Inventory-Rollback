@@ -115,7 +115,9 @@ public class InventoryRollback extends JavaPlugin {
         V1_14_R1,
         V1_15_R1,
         V1_16_R1,
-        V1_16_R2
+        V1_16_R2,
+        V1_16_R3,
+        V1_17_R1
     }
 
     public enum VersionName {
